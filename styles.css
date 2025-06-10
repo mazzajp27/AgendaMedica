@@ -18,9 +18,10 @@ body {
   }
   
   .logo {
-    width: 150px;
+    width: 200px;
     height: auto;
-    margin-bottom: 20px;
+    margin: 0 auto 30px auto;
+    display: block;
   }
   
   h1 {
@@ -201,6 +202,15 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    gap: 20px;
+  }
+  
+  .btn.secondary,
+  .btn.primary {
+    flex: 1;
+    max-width: 150px;
+    padding: 10px 20px;
+    font-size: 16px;
   }
   
   .btn.secondary {
@@ -345,5 +355,9 @@ body {
     width: auto;
     display: block;
     margin: 20px auto 0 auto; /* Centered button */
+  }
+  
+  label .required-asterisk {
+    color: red;
   }
   
