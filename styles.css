@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f0ec;
+  }
+  .container {
+    background: #d3d3d3;
+    margin: 40px auto;
+    padding: 40px;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+  }
+  .logo {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+  }
+  h1 {
+    text-align: center;
+    color: #5a448c;
+  }
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  .tab {
+    padding: 8px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
+  .tab.active {
+    background-color: #333;
+    color: white;
+  }
+  form {
+    margin-top: 20px;
+  }
+  .input-group {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .input-group input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 10px;
+  }
+  .icon {
+    padding: 0 10px;
+  }
+  .remember {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #8b78ba;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .btn.primary {
+    background: #5a448c;
+  }
+  .forgot {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #5a448c;
+    text-decoration: none;
+  }
+  .grid-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .acessibilidade {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .header {
+    background: #d3d3d3;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: #5a448c;
+    font-weight: bold;
+  }
+  .container.agenda {
+    max-width: 800px;
+  }
+  .card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  .card h2 {
+    background: #5a448c;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    margin: -30px -30px 20px -30px;
+    text-align: center;
+  }
+  .card select, .card input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
