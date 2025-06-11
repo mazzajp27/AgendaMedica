@@ -10,6 +10,7 @@ body {
     background-color: #d9d9d9;
     padding: 40px;
     border-radius: 8px;
+    position: relative;
   }
   
   .logo-container {
@@ -36,17 +37,22 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    gap: 12px;
   }
   
   .tab {
     background-color: #a088c2;
     color: white;
-    padding: 10px 30px;
+    padding: 12px 40px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    margin: 0 5px;
+    font-size: 18px;
+    margin: 0;
+    min-width: 140px;
+    max-width: 200px;
+    flex: 1 1 0;
+    text-align: center;
   }
   
   .tab.active {
@@ -72,6 +78,11 @@ body {
     margin-bottom: 20px;
   }
   
+  .input-group input[type="password"] {
+    padding-right: 44px;
+    box-sizing: border-box;
+  }
+  
   .input-group .icon {
     position: absolute;
     left: 10px;
@@ -83,16 +94,21 @@ body {
   
   .password-toggle {
     position: absolute;
-    right: 10px;
-    top: 50%;
+    right: 35px;
+    top: 40%;
     transform: translateY(-50%);
+    height: 24px;
+    display: flex;
+    align-items: center;
     cursor: pointer;
     color: #573f84;
+    z-index: 2;
   }
   
-  .password-toggle::before {
-    content: '👁️';
-    font-size: 20px;
+  .password-toggle img {
+    width: 20px;
+    height: 20px;
+    
   }
   
   .remember {
@@ -105,16 +121,28 @@ body {
     margin-right: 10px;
   }
   
-  .btn.primary {
+  .btn.primary, .btn.secondary {
     background-color: #573f84;
     color: white;
-    padding: 12px 24px;
+    padding: 14px 40px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    width: 100%;
     font-size: 18px;
-    margin-bottom: 15px;
+    width: 48%;
+    min-width: 120px;
+    max-width: 220px;
+    margin-bottom: 0;
+    transition: background 0.2s;
+  }
+  
+  .btn.secondary {
+    background-color: #a088c2;
+    color: white;
+  }
+  
+  .btn.primary:hover, .btn.secondary:hover {
+    background-color: #4a3270;
   }
   
   .forgot {
@@ -128,13 +156,23 @@ body {
   .acessibilidade {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 15px;
     margin-top: 50px;
+    position: absolute;
+    top: 0;
+    right: -35px; /* Ajustado aqui */
+    width: auto;
+    z-index: 10;
   }
   
-  .acessibilidade img {
-    width: 30px;
-    height: 30px;
+  
+  .acessibilidade img, .acessibilidade-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+    display: block;
   }
   
   button,
@@ -201,30 +239,18 @@ body {
   .buttons {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 24px;
     margin-top: 30px;
-    gap: 20px;
   }
   
-  .btn.secondary,
-  .btn.primary {
-    flex: 1;
-    max-width: 150px;
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-  
-  .btn.secondary {
-    background-color: #a088c2;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  
-  .btn.secondary:hover {
-    background-color: #8470a6;
+  .buttons .btn.primary,
+  .buttons .btn.secondary {
+    flex: 1 1 0;
+    min-width: 120px;
+    max-width: 220px;
+    width: 100%;
+    margin: 0;
   }
   
   .header {
@@ -251,17 +277,25 @@ body {
   .container.agenda {
     max-width: 900px;
     padding: 20px;
+    background-color: #d9d9d9;
+    border-radius: 8px;
+  }
+  
+  .container.agenda, .container.agenda * {
+    color: #111 ;
   }
   
   .card {
-    background-color: #a088c2;
+    /* background-color: #a088c2; */
+    /* background-color: #fff; */
+    background-color: transparent;
     padding: 30px;
     border-radius: 8px;
     margin-bottom: 20px;
   }
   
   .card h2 {
-    color: white;
+    color: #111 !important;
     text-align: center;
     margin-bottom: 30px;
   }
@@ -344,7 +378,7 @@ body {
   
   .time-slot {
     background-color: #573f84;
-    color: white;
+    color: #fff !important;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
@@ -352,12 +386,37 @@ body {
   }
   
   .container.agenda .btn.primary {
-    width: auto;
+    min-width: 220px;
+    max-width: 320px;
+    width: 60%;
     display: block;
-    margin: 20px auto 0 auto; /* Centered button */
+    margin: 20px auto 0 auto;
+    color: #fff !important;
   }
   
   label .required-asterisk {
     color: red;
+  }
+  
+  .center-btn {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 200px;
+  }
+  
+  .acessibilidade-center {
+    justify-content: center !important;
+  }
+  
+  .buttons .btn.primary {
+    margin-left: auto;
+  }
+  
+  /* Cor preta comentada apenas para os labels de Especialidade, Médico e Agendar */
+  .container.agenda label:nth-of-type(1), /* Especialidade */
+  .container.agenda label:nth-of-type(2), /* Médico */
+  .container.agenda label:nth-of-type(3)  /* Agendar */
+  {
+    /* color: #111 !important; */
   }
   

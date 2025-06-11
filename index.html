@@ -20,19 +20,32 @@
       </div>
       <label>Senha</label>
       <div class="input-group">
-        <input type="password">
-        <span class="password-toggle"></span>
+        <input type="password" id="login-password">
+        <span class="password-toggle" onclick="togglePassword('login-password', this)">
+          <img src="img/olho.png" alt="Mostrar senha" style="width:24px;height:24px;">
+        </span>
       </div>
       <div class="remember">
         <input type="checkbox"> <label>Lembrar senha</label>
       </div>
-      <button class="btn primary">LOGIN</button>
+      <button class="btn primary center-btn">LOGIN</button>
       <a href="#" class="forgot">Esqueceu a senha?</a>
     </form>
     <div class="acessibilidade">
       <img src="img/acessibilidade.png" alt="Acessibilidade" class="acessibilidade-icon">
-
     </div>
   </div>
+  <script>
+  function togglePassword(inputId, toggleElem) {
+    const input = document.getElementById(inputId);
+    if (input.type === 'password') {
+      input.type = 'text';
+      toggleElem.querySelector('img').style.opacity = 0.5;
+    } else {
+      input.type = 'password';
+      toggleElem.querySelector('img').style.opacity = 1;
+    }
+  }
+  </script>
 </body>
 </html>
