@@ -24,15 +24,3 @@ Lucas Vellasco
 
 - **HTML5** — Estrutura das páginas
 - **CSS3** — Estilização e responsividade
-
-## 💡 Personalização
-
-- Para alterar o logo, substitua o arquivo em `img/logo-medlife.png`.
-- Para trocar o ícone de acessibilidade, substitua `img/acessibilidade.png`.
-- O ícone de exibir senha pode ser alterado em `img/olho.png`.
-
-
-
-
-
-> Feito com 💜 para facilitar o agendamento médico e promover acessibilidade!
