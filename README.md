@@ -3,7 +3,7 @@ Grupo:
 João Pedro Venturoso Mazza
 Vitor Reis Rodrigues de Souza
 Pablo Perri
-Matheus Rodrigues
+Mateus Rodrigues
 Lucas Vellasco
 ## 🚀 Como Executar
 
