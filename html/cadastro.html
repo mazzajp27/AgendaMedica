@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Medlife</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<div class="container">
+    <img src="img/logo-medlife.png" alt="Logo Medlife" class="logo">
+    <form class="grid-form">
+      <div>
+        <label>Nome Completo <span class="required-asterisk">*</span></label>
+        <input type="text">
+      </div>
+      <div>
+        <label>CPF <span class="required-asterisk">*</span></label>
+        <input type="text">
+      </div>
+      <div>
+        <label>Email <span class="required-asterisk">*</span></label>
+        <input type="email" placeholder="Exemplo@gmail.com">
+      </div>
+      <div>
+        <label>CEP <span class="required-asterisk">*</span></label>
+        <input type="text">
+      </div>
+      <div>
+        <label>Senha <span class="required-asterisk">*</span></label>
+        <div class="input-group">
+          <input type="password" id="cadastro-password">
+          <span class="password-toggle" onclick="togglePassword('cadastro-password', this)">
+            <img src="img/olho.png" alt="Mostrar senha" style="width:24px;height:24px;">
+          </span>
+        </div>
+      </div>
+      <div>
+        <label>Confirmar Senha <span class="required-asterisk">*</span></label>
+        <div class="input-group">
+          <input type="password" id="cadastro-confirm-password">
+          <span class="password-toggle" onclick="togglePassword('cadastro-confirm-password', this)">
+            <img src="img/olho.png" alt="Mostrar senha" style="width:24px;height:24px;">
+          </span>
+        </div>
+      </div>
+    </form>
+    <div class="buttons">
+      <button class="btn secondary">VOLTAR</button>
+      <button class="btn primary">SALVAR</button>
+    </div>
+    <div class="acessibilidade">
+      <img src="img/acessibilidade.png" alt="Acessibilidade" class="acessibilidade-icon">
+    </div>
+  </div>
+<script>
+function togglePassword(inputId, toggleElem) {
+  const input = document.getElementById(inputId);
+  if (input.type === 'password') {
+    input.type = 'text';
+    toggleElem.querySelector('img').style.opacity = 0.5;
+  } else {
+    input.type = 'password';
+    toggleElem.querySelector('img').style.opacity = 1;
+  }
+}
+</script>
+</body>
+</html>
+  
